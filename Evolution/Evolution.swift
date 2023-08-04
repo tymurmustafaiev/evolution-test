@@ -18,24 +18,22 @@ public final class EvolutionInteractor {
 }
 
 public extension EvolutionInteractor {
-    struct OtherModel {
-        struct Model {
-            @Wrapper public var title: String = ""
-            @Wrapper public var icon: UIImage?
-            @Wrapper public var isEnabled: Bool
-            let action: () -> Void
+    struct Model {
+        @Wrapper public var title: String = ""
+        @Wrapper public var icon: UIImage?
+        @Wrapper public var isEnabled: Bool
+        let action: () -> Void
 
-            public init(
-                title: String,
-                icon: UIImage? = nil,
-                isEnabled: Bool = true,
-                action: @escaping () -> Void
-            ) {
-                self.title = title
-                self.icon = icon
-                self.isEnabled = isEnabled
-                self.action = action
-            }
+        public init(
+            title: String,
+            icon: UIImage? = nil,
+            isEnabled: Bool = true,
+            action: @escaping () -> Void
+        ) {
+            self.title = title
+            self.icon = icon
+            self.isEnabled = isEnabled
+            self.action = action
         }
     }
 }
